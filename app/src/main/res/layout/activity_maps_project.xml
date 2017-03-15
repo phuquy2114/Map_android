@@ -1,0 +1,54 @@
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pc.mapproject1.MapsProjectActivity" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="Restaurant"
+            android:id="@+id/btnRestaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="Hotel"
+            android:id="@+id/btnHotel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="ATM"
+            android:id="@+id/btnATM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <TextView
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:text="text"
+        android:id="@+id/tvShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+     <Button
+         android:id="@+id/btnFind"
+         android:text="Find"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</FrameLayout>
