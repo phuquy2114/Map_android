@@ -115,8 +115,7 @@ mBtnFind.setOnClickListener(new View.OnClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
                     routes(marker.getPosition());
-//                marker.showInfoWindow();
-//                Toast.makeText(getApplicationContext(),latitude+" : "+ longitude,Toast.LENGTH_SHORT).show();
+
                 return false;
             }
         });
