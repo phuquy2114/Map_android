@@ -45,11 +45,8 @@ public class PlacesDisplayTask extends AsyncTask<Object, Integer, List<HashMap<S
             double lng = Double.parseDouble(googlePlace.get("lng"));
             String placeName = googlePlace.get("place_name");
             String vicinity = googlePlace.get("vicinity");
-            //String iCon = googlePlace.get("icon");
             LatLng latLng = new LatLng(lat, lng);
-            //markerOptions.icon(BitmapDescriptorFactory.fromPath("https://maps.gstatic.com/mapfiles/place_api/icons/gas_station-71.png"));
             markerOptions.title(placeName+":"+vicinity);
-           // markerOptions.getIcon();
             markerOptions.position(latLng);
             markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.map));
 

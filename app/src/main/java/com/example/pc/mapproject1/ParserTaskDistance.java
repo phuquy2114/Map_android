@@ -29,8 +29,7 @@ public class ParserTaskDistance extends AsyncTask<String, Integer,
         this.tvShow = tvShow;
     }
     @Override
-    protected List<List<HashMap<String, String>>> doInBackground(String...
-                                                                         jsonData) {
+    protected List<List<HashMap<String, String>>> doInBackground(String... jsonData) {
         JSONObject jObject;
         List<List<HashMap<String, String>>> routes = null;
         try{
@@ -47,7 +46,6 @@ public class ParserTaskDistance extends AsyncTask<String, Integer,
                                          result) {
         ArrayList<LatLng> points = null;
         PolylineOptions lineOptions = null;
-        //MarkerOptions markerOptions = new MarkerOptions();
         String distance = "";
         String duration = "";
         if(result.size()<1){
@@ -70,7 +68,6 @@ public class ParserTaskDistance extends AsyncTask<String, Integer,
                 double lng = Double.parseDouble(point.get("lng"));
                 LatLng position = new LatLng(lat, lng);
                 points.add(position);
-                //lineOptions.add(position);
             }
             lineOptions.addAll(points);
             lineOptions.width(7);

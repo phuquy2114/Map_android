@@ -25,8 +25,6 @@ public class DownloadStackDistance extends AsyncTask<String,Void,String>
 {
     private GoogleMap m;
     private TextView tv;
-    String a;
-   // Context context;
     DownloadStackDistance(GoogleMap map, TextView tv){
         this.m=map;
         this.tv = tv;
@@ -57,8 +55,7 @@ public class DownloadStackDistance extends AsyncTask<String,Void,String>
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.connect();
             iStream = urlConnection.getInputStream();
-            BufferedReader br = new BufferedReader(new
-                    InputStreamReader(iStream));
+            BufferedReader br = new BufferedReader(new InputStreamReader(iStream));
             StringBuffer sb = new StringBuffer();
             String line = "";
             while( ( line = br.readLine()) != null) {

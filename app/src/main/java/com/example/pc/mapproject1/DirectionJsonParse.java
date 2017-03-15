@@ -32,21 +32,18 @@ public class DirectionJsonParse {
                 List<HashMap<String,String>> path = new ArrayList<HashMap<String, String>>();
                 for (int j=0;j<jsonArraylegs.length();j++){
                     // put json distance + add to path arraylist
-                    jsonArraydistance = ((JSONObject)
-                            jsonArraylegs.get(j)).getJSONObject("distance");
+                    jsonArraydistance = ((JSONObject) jsonArraylegs.get(j)).getJSONObject("distance");
                     HashMap<String,String> hashMapDistance = new HashMap<String,String>();
                     hashMapDistance.put("Distance", jsonArraydistance.getString("text"));
                     path.add(hashMapDistance);
 
                     // get json duration + add to path arraylist
-                    jsonArrayduration = ((JSONObject)
-                            jsonArraylegs.get(j)).getJSONObject("duration");
+                    jsonArrayduration = ((JSONObject) jsonArraylegs.get(j)).getJSONObject("duration");
                     HashMap<String,String> hashMapduration = new HashMap<String,String>();
                     hashMapduration.put("Duration", jsonArrayduration.getString("text"));
                     path.add(hashMapduration);
                     //get json steps
                     jsonArraysteps = ((JSONObject) jsonArraylegs.get(j)).getJSONArray("steps");
-
                     for (int k = 0; k<jsonArraysteps.length(); k++ ){
                         String polyline = (String) ((JSONObject)(((JSONObject)
                                 jsonArraysteps.get(k)).get("polyline"))).get("points");

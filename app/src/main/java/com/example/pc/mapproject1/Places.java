@@ -39,9 +39,8 @@ public class Places {
 
     private HashMap<String, String> getPlace(JSONObject googlePlaceJson) {
         HashMap<String, String> googlePlaceMap = new HashMap<String, String>();
-        //String icon = "";
-        String placeName = "-NA-";
-        String vicinity = "-NA-";
+        String placeName = "";
+        String vicinity = "";
         String latitude = "";
         String longitude = "";
         String reference = "";
@@ -56,7 +55,6 @@ public class Places {
             latitude = googlePlaceJson.getJSONObject("geometry").getJSONObject("location").getString("lat");
             longitude = googlePlaceJson.getJSONObject("geometry").getJSONObject("location").getString("lng");
             reference = googlePlaceJson.getString("reference");
-            //googlePlaceMap.put("icon",icon);
             googlePlaceMap.put("place_name", placeName);
             googlePlaceMap.put("vicinity", vicinity);
             googlePlaceMap.put("lat", latitude);

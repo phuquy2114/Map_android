@@ -149,25 +149,24 @@ public class MapsProjectActivity extends FragmentActivity implements OnMapReadyC
     }
 
     /**
-     * phương thức routes dùng để tìm đường đi trong lớp MapsActivity.
+     * phương thức routes dùng để tìm đường đi trong lớp MapsProjectActivity.
      */
     private void routes(LatLng latLng) {
+        MarkerOptions options = null;
         markerPoints = new ArrayList<LatLng>();
-//      if (markerPoints.size() > 1) {
-//            markerPoints.clear();
-//        }
-        // mMap.clear();
+        mMap.clear();
         Location mylocation = mMap.getMyLocation();
         LatLng mylatlng = new LatLng(mylocation.getLatitude(), mylocation.getLongitude());
         markerPoints.add(mylatlng);
         markerPoints.add(latLng);
-        MarkerOptions options = new MarkerOptions();
+         options = new MarkerOptions();
         options.position(latLng);
         if (markerPoints.size() == 2) {
             options.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
         }
 
         mMap.addMarker(options);
+
         if (markerPoints.size() == 2) {
             LatLng origin = markerPoints.get(0);
             LatLng dest = markerPoints.get(1);
